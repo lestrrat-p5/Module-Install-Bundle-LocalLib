@@ -18,7 +18,10 @@ sub bundle_local_lib {
     $lib ||= 'extlib';
     $self->Makefile->postamble(<<EOM);
 bundle_local_lib: metafile
-\t\$(FULLPERLRUN) -M$class -e '$class->new(extlib => "$lib")->bundle_from_meta()'
+\tcpanm --skip-installed --local-lib=$lib --installdeps .
+
+bundle_local_lib_fast: metafile
+\tcpanm --notest --skip-installed --local-lib=$lib --installdeps .
 EOM
 }
 
@@ -44,6 +47,9 @@ Module::Install::Bundle::LocalLib - Bundle Your Prerequisites With local::lib
 
     # after you typed perl Makefile.PL:
     make bundle_local_lib
+
+    # if you don't care about running tests, do this:
+    make bundle_local_lib_fast
 
 =head1 SEE ALSO
 
