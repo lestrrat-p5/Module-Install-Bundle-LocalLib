@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use base qw(Module::Install::Base);
 
-our $VERSION = '0.00001';
+our $VERSION = '0.00002';
 
 sub bundle_local_lib {
     my ($self, @args) = @_;
