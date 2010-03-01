@@ -1,8 +1,13 @@
 Changes
 =======
 
+0.00003 - 02 Mar 2010
+    - No code changes. Repackaged with this Changes file for everybody's
+      peace of mind.
+
 0.00002 - 01 Mar 2010
-    - Use cpanm
+    - Use cpanm.
+    - Implement bundle_local_lib_fast action, which will skip tests
 
 0.00001 - 17 Dec 2009
     - Initial release
