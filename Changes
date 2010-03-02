@@ -1,8 +1,12 @@
 Changes
 =======
 
+0.00005 - 02 Mar 2010
+    - Un-fixed. Today is just not my day.
+
 0.00004 - 02 Mar 2010
     - Fix wrong flag name. Argh!
+    - use $(NOECHO)
 
 0.00003 - 02 Mar 2010
     - No code changes. Repackaged with this Changes file for everybody's
