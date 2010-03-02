@@ -1,6 +1,9 @@
 Changes
 =======
 
+0.00004 - 02 Mar 2010
+    - Fix wrong flag name. Argh!
+
 0.00003 - 02 Mar 2010
     - No code changes. Repackaged with this Changes file for everybody's
       peace of mind.
