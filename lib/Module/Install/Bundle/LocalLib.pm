@@ -6,16 +6,9 @@ use base qw(Module::Install::Base);
 our $VERSION = '0.00003';
 
 sub bundle_local_lib {
-    my ($self, @args) = @_;
-
-    my ($class, $lib) = ('App::BundleDeps', 'extlib');
-    if (@args == 1) {
-        $lib = $args[0];
-    } elsif (@args > 1) {
-        ($class, $lib) = @args;
-    }
-
+    my ($self, $lib) = @_;
     $lib ||= 'extlib';
+
     $self->Makefile->postamble(<<EOM);
 bundle_local_lib: metafile
 \tcpanm --skip-installed --local-lib=$lib --installdeps .
