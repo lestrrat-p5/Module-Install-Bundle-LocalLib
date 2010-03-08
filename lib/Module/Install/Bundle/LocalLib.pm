@@ -11,10 +11,10 @@ sub bundle_local_lib {
 
     $self->Makefile->postamble(<<EOM);
 bundle_local_lib: metafile
-\t\$(NOECHO) cpanm --skip-installed --local-lib=$lib --installdeps .
+\t\$(NOECHO) bundledeps --extlib=$lib
 
 bundle_local_lib_fast: metafile
-\t\$(NOECHO) cpanm --notest --skip-installed --local-lib=$lib --installdeps .
+\t\$(NOECHO) bundledeps --notest --extlib=$lib
 EOM
 }
 

@@ -2,6 +2,8 @@ use inc::Module::Install;
 
 name 'Module-Install-Bundle-LocalLib';
 all_from 'lib/Module/Install/Bundle/LocalLib.pm';
-requires 'App::cpanminus' => '0.9910';
+requires 'App::BundleDeps' => '0.00006';
+
+auto_set_repository;
 
 WriteAll;
