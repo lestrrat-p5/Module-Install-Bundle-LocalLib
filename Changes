@@ -1,6 +1,10 @@
 Changes
 =======
 
+0.00006 - 09 Mar 2010
+    - Use bundledeps command instead of cpanm -- We'd like to completely
+      detach from other environments when installing
+
 0.00005 - 02 Mar 2010
     - Un-fixed. Today is just not my day.
 
